@@ -1,0 +1,39 @@
+#include <iostream>
+#include <vector>
+int main()
+{
+	int t;
+	int n;
+	int a;
+	std::vector<int> s;
+	
+	std::cin >> t;
+	for (int i = 0; i < t; i++)
+	{
+		int count = 1;
+		s.clear();
+		std::cin >> n;
+		for (int j = 0; j < n; j++)
+		{
+			std::cin >> a;
+			s.push_back(a);
+		}
+		for (int g = 1; g < n; g++)
+		{
+			if (s[g] == 1 and s[g-1] == 1)
+			{
+				count = count + 5;
+			}
+			if ((s[g] == 1 and s[g - 1] == 0) or (s[g] == 0 and s[g-1] == 1))
+			{
+				count = count+1;
+			}
+			if (s[g] == 0 and s[g - 1] == 0)
+			{
+				count = -1;
+				break;
+			}
+		}
+	std::cout << count<< std::endl;
+	}
+}
