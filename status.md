@@ -1,4 +1,4 @@
-CHECK: 20231223-130457
+CHECK: 20231224-110000
 ERROR: lab complex - test build failed
 ERROR: lab complex_io - test build failed
 ERROR: lab rational - test build failed
